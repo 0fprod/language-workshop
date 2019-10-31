@@ -16,13 +16,13 @@ class SlothMachine {
   private rouletteTwo: boolean;
   private rouletteThree: boolean;
 
-  play() {
+  play(): void {
     this.accCoins++;
     this.rouletteOne = !!Math.round(Math.random());
     this.rouletteTwo = !!Math.round(Math.random());
     this.rouletteThree = !!Math.round(Math.random());
 
-    if (this.rouletteOne && this.rouletteTwo && this.rouletteThree){
+    if (this.rouletteOne && this.rouletteTwo && this.rouletteThree) {
       console.log(`Congratulations!!!. You won ${this.accCoins} coins!!`);
       this.accCoins = 0;
     } else {
